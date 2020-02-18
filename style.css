@@ -1,0 +1,98 @@
+/* ---------------GENERAL--------------- */
+
+body {
+    background-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ---------------CARD--------------- */
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    cursor: pointer;
+    width: 340px;
+    height: 480px;
+}
+
+
+/* ---------------FRONT+BACK--------------- */
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: .6s linear;
+}
+
+
+/* ---------------FRONT--------------- */
+
+.card .front {
+    /* background-color: red; */
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.card .front img {
+    height: 100%;
+}
+
+.card:hover>.front {
+    /* background-color: red; */
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+
+/* ---------------BACK--------------- */
+
+.card .back {
+    background-color: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back .backContent {
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+}
+
+.back .backContent .sm {
+    margin: 20px 0;
+}
+
+.back .backContent .sm a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.back .backContent .sm a:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.card:hover>.back {
+    /* background-color: green; */
+    transform: perspective(600px) rotateY(0deg);
+}
