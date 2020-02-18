@@ -1,4 +1,4 @@
-**3D CARD HOVER ANIMATION : You can build your own project 3D card design
+**3D CARD HOVER ANIMATION : You can build your own project 3D card design**
 
 
 -----------------------------------------------------------------------------------------------------------------------------------
